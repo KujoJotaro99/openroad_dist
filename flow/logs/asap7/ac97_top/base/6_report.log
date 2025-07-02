@@ -1,0 +1,108 @@
+OpenROAD HEAD-HASH-NOTFOUND 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/asap7/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation ac97_top (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 68344 rc segments
+[INFO RCX-0439] Coupling Cap extraction ac97_top ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 54% of 75800 wires extracted
+[INFO RCX-0442] 100% of 75800 wires extracted
+[INFO RCX-0045] Extract 8412 nets, 76316 rsegs, 76316 caps, 101587 ccs
+[INFO RCX-0443] 8412 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 7.70e-01 V
+Worstcase voltage: 7.56e-01 V
+Average voltage  : 7.68e-01 V
+Average IR drop  : 1.53e-03 V
+Worstcase IR drop: 1.36e-02 V
+Percentage drop  : 1.76 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 6.36e-03 V
+Average voltage  : 7.64e-04 V
+Average IR drop  : 7.64e-04 V
+Worstcase IR drop: 6.36e-03 V
+Percentage drop  : 0.83 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                              8877     706.39
+  Tap cell                                406      11.84
+  Tie cell                                  2       0.09
+  Standard cell                          5226     862.98
+  Buffer                                   70      11.75
+  Clock buffer                             44      13.38
+  Timing Repair Buffer                    254      25.08
+  Inverter                                367      17.57
+  Clock inverter                            3       0.57
+  Sequential cell                         328      98.33
+  Multi-Input combinational cell         1560     167.58
+  Total                                 17137    1915.55
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 1197 u^2 63% utilization.
+[WARNING GUI-0076] could not connect to display host.docker.internal:0
+[INFO GUI-0075] Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[ERROR GUI-0077] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  GUI-0077
+Signal 6 received
+Stack trace:
+ 0# 0x00005555563FAB92 in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+ 1# 0x00002AAAAF86F520 in /lib/x86_64-linux-gnu/libc.so.6
+ 2# pthread_kill in /lib/x86_64-linux-gnu/libc.so.6
+ 3# raise in /lib/x86_64-linux-gnu/libc.so.6
+ 4# abort in /lib/x86_64-linux-gnu/libc.so.6
+ 5# 0x00002AAAAF59AB9E in /lib/x86_64-linux-gnu/libstdc++.so.6
+ 6# 0x00002AAAAF5A620C in /lib/x86_64-linux-gnu/libstdc++.so.6
+ 7# 0x00002AAAAF5A51E9 in /lib/x86_64-linux-gnu/libstdc++.so.6
+ 8# __gxx_personality_v0 in /lib/x86_64-linux-gnu/libstdc++.so.6
+ 9# 0x00002AAAAF823884 in /lib/x86_64-linux-gnu/libgcc_s.so.1
+10# _Unwind_Resume in /lib/x86_64-linux-gnu/libgcc_s.so.1
+11# 0x00002AAAAEA522F9 in /lib/x86_64-linux-gnu/libQt5Core.so.5
+12# QMessageLogger::fatal(char const*, ...) const in /lib/x86_64-linux-gnu/libQt5Core.so.5
+13# QGuiApplicationPrivate::createPlatformIntegration() in /lib/x86_64-linux-gnu/libQt5Gui.so.5
+14# QGuiApplicationPrivate::createEventDispatcher() in /lib/x86_64-linux-gnu/libQt5Gui.so.5
+15# QCoreApplicationPrivate::init() in /lib/x86_64-linux-gnu/libQt5Core.so.5
+16# QGuiApplicationPrivate::init() in /lib/x86_64-linux-gnu/libQt5Gui.so.5
+17# QApplicationPrivate::init() in /lib/x86_64-linux-gnu/libQt5Widgets.so.5
+18# gui::startGui(int&, char**, Tcl_Interp*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, bool) in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+19# gui::Gui::showGui(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool) in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+20# show(char const*, bool, bool) in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+21# 0x0000555556C5D4AB in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+22# TclNRRunCallbacks in /lib/x86_64-linux-gnu/libtcl8.6.so
+23# 0x00002AAAAB332028 in /lib/x86_64-linux-gnu/libtcl8.6.so
+24# Tcl_EvalEx in /lib/x86_64-linux-gnu/libtcl8.6.so
+25# Tcl_Eval in /lib/x86_64-linux-gnu/libtcl8.6.so
+26# sta::sourceTclFile(char const*, bool, bool, Tcl_Interp*) in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+27# 0x00005555563FA393 in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+28# Tcl_MainEx in /lib/x86_64-linux-gnu/libtcl8.6.so
+29# main in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+30# 0x00002AAAAF856D90 in /lib/x86_64-linux-gnu/libc.so.6
+31# __libc_start_main in /lib/x86_64-linux-gnu/libc.so.6
+32# _start in /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+qemu: uncaught target signal 6 (Aborted) - core dumped
+Command terminated by signal 6
+Elapsed time: 1:17.78[h:]min:sec. CPU time: user 80.85 sys 6.38 (112%). Peak memory: 452720KB.
