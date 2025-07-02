@@ -1,0 +1,14 @@
+image: gitlab-registry.nrp-nautilus.io/sh04/openroad_dist/openroad-flow:latest
+
+stages:
+  - floorplan
+
+run-floorplan:
+  stage: floorplan
+  script:
+    - make floorplan
+  artifacts:
+    paths:
+      - results/
+      - logs/
+      - reports/

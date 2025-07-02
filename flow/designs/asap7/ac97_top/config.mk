@@ -1,0 +1,13 @@
+export DESIGN_NAME=ac97_top
+export PLATFORM=asap7
+
+export VERILOG_FILES=$(DESIGN_HOME)/src/$(DESIGN_NAME)/ac97_top.v
+export SDC_FILE=$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NAME)/ac97_top.sdc
+
+export FLOORPLAN_DEF=$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NAME)/ac97_top_fp.def
+
+export ADDITIONAL_LEFS=$(PLATFORM_HOME)/$(PLATFORM)/lef/asap7sc7p5t_28_SL_1x_220121a.lef
+
+export LIB_FILES=$(PLATFORM_HOME)/$(PLATFORM)/lib/CCS/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib
+
+export ADDITIONAL_GDSOAS=$(PLATFORM_HOME)/$(PLATFORM)/gds/*.gds
